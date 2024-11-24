@@ -10,7 +10,7 @@ import styled from 'styled-components';
   NPP - Non-preemptive Priority
   PP - Preemptive Priority
 */
-export type AlgoType = 'FCFS' | 'SJF' |  'RR' | 'NPP' | 'PP';
+export type AlgoType = 'FCFS' | 'SJF' | 'SRTF' | 'RR' | 'NPP' | 'PP';
 export type OptionType = {
   value: AlgoType;
   label: string;
@@ -27,10 +27,10 @@ const options: OptionType[] = [
     value: 'SJF',
     label: 'Shortest Job First, SJF (non-preemptive)',
   },
-  // {
-  //   value: 'SRTF',
-  //   label: 'Shortest Remaining Time First, SRTF',
-  // },
+  {
+    value: 'SRTF',
+    label: 'Shortest Remaining Time First, SRTF',
+  },
   {
     value: 'RR',
     label: 'Round-Robin, RR',
